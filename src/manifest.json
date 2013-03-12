@@ -9,6 +9,7 @@
    ],
    "background": {
       "scripts": [
+         "js/opps.js",
          "js/background.js"
       ]
    },
