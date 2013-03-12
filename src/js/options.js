@@ -3,7 +3,13 @@ $(function() {
 });
 
 $("#save").on('click', function() {
-
+  var inputSetting = $('#inputSetting').val();
+  try {
+    var setting = jsyaml.load(inputSetting);
+    console.log(setting);
+  } catch(e) {
+    alert('invalid yaml?');
+  }
 });
 
 $("#inputSetting").on('keydown', function(e) {
