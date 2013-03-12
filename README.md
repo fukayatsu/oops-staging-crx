@@ -8,7 +8,7 @@ options
 =======
 
 ```
-- name: 'dev' # required
+dev: # required
   label: 'This is development server!' # option(use 'name' if absent)
   targets:    # required
     - http://dev.example.com

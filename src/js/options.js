@@ -1,12 +1,25 @@
 $(function() {
-
+  var setting = localStorage.getItem('setting-yaml');
+  if (setting) {
+    $('#inputSetting').val(setting);
+  }
 });
 
 $("#save").on('click', function() {
   var inputSetting = $('#inputSetting').val();
+  var targetMap = {};
   try {
     var setting = jsyaml.load(inputSetting);
-    console.log(setting);
+    for (var name in setting) {
+      var targets = setting[name]['targets'];
+      for (var i = 0; i < targets.length; i++) {
+        targetMap[targets[i]] = name;
+      }
+    }
+    localStorage.setItem('targetMap',    JSON.stringify(targetMap));
+    localStorage.setItem('setting',      JSON.stringify(setting));
+    localStorage.setItem('setting-yaml', inputSetting);
+    alert('saved.');
   } catch(e) {
     alert('invalid yaml?');
   }
