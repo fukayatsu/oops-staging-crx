@@ -17,4 +17,13 @@
        "url": chrome.extension.getURL("options.html")
     });
   });
+
+  chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+    if (request.method == "getSettingForUrl") {
+      var setting = opps.getSettingForUrl(request.url);
+      sendResponse({data: setting});
+    } else {
+      sendResponse({});
+    }
+  });
 })();
