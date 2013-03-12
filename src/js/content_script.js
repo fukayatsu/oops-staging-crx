@@ -5,5 +5,5 @@ chrome.extension.sendRequest({
   var setting = response.data;
   var label = setting.label;
   if (!label) return;
-  console.log(label);
+  $(document.body).prepend($('<span style="font-size: 50px; color: red";></span>').text(label));
 });
