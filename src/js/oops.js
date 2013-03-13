@@ -1,4 +1,4 @@
-var opps = {
+var oops = {
   setBadgeForUrl: function(url) {
     var label = this.getSettingNameForUrl(url);
 

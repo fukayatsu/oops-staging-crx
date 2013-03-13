@@ -3,12 +3,12 @@
     if (details['parentFrameId'] != -1) { return ; }
 
     var pageUrl = details['url'];
-    opps.setBadgeForUrl(pageUrl);
+    oops.setBadgeForUrl(pageUrl);
   });
 
   chrome.tabs.onActivated.addListener(function(info) {
     chrome.tabs.get(info.tabId, function(tab) {
-      opps.setBadgeForUrl(tab.url);
+      oops.setBadgeForUrl(tab.url);
     });
   });
 
@@ -20,7 +20,7 @@
 
   chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
     if (request.method == "getSettingForUrl") {
-      var setting = opps.getSettingForUrl(request.url);
+      var setting = oops.getSettingForUrl(request.url);
       sendResponse({data: setting});
     } else {
       sendResponse({});
