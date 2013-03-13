@@ -5,5 +5,5 @@ chrome.extension.sendRequest({
   var setting = response.data;
   var label = setting.label;
   if (!label) return;
-  $(document.body).append($('<div id="opps-staging-label-wrapper"></div>').text(label));
+  $(document.body).append($('<span id="opps-staging-label"></span>').text(label));
 });
