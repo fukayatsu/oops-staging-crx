@@ -5,5 +5,5 @@ chrome.extension.sendRequest({
   var setting = response.data;
   var label = setting.label;
   if (!label) return;
-  $(document.body).prepend($('<span style="font-size: 50px; color: red";></span>').text(label));
+  $(document.body).append($('<div id="opps-staging-label-wrapper"></div>').text(label));
 });

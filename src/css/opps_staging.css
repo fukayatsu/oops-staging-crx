@@ -1,0 +1,8 @@
+#opps-staging-label-wrapper {
+  position: fixed;
+  top: 50px;
+  left: 10px;
+  font-size: 50px;
+  color: red;
+  z-index: 99999;
+}
