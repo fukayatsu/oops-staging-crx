@@ -1,6 +1,6 @@
-#opps-staging-label-wrapper {
+#opps-staging-label {
   position: fixed;
-  top: 50px;
+  top: 100px;
   left: 10px;
   font-size: 50px;
   color: red;
