@@ -5,5 +5,9 @@ chrome.extension.sendRequest({
   var setting = response.data;
   var label = setting.label;
   if (!label) return;
-  $(document.body).append($('<span id="opps-staging-label"></span>').text(label));
+  $(document.body).append($('<div id="opps-staging-label"></div>').text(label));
+});
+
+$(document).on('click', '#opps-staging-label', function(){
+  $(this).remove();
 });
