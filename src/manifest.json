@@ -1,7 +1,7 @@
 {
    "manifest_version": 2,
    "name": "OopsStaging",
-   "version": "0.0.3",
+   "version": "0.0.4",
    "options_page": "options.html",
    "permissions": [
       "webNavigation",
@@ -30,5 +30,8 @@
    "icons": {
       "128": "img/icon128.png",
       "48": "img/icon48.png"
-   }
+   },
+   "web_accessible_resources": [
+      "js/jquery-1.9.1.min.map"
+   ]
 }
